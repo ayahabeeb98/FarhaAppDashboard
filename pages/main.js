@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     row.insertCell(1).innerHTML = data.ownerName;
                     row.insertCell(2).innerHTML = data.ownerPhone;
                     const anchor = document.createElement('A');
-                    anchor.href = `./hall.html#i=${doc.id}`;
+                    anchor.href = `./hallDetails.html#i=${doc.id}`;
                     const anchorVal = document.createTextNode(data.hallName);
                     anchor.appendChild(anchorVal);
                     row.insertCell(3).appendChild(anchor);
