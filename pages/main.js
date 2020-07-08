@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         await fetch('https://exp.host/--/api/v2/push/send', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 Accept: 'application/json',
                 'Accept-encoding': 'gzip, deflate',
@@ -45,56 +46,71 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     row.insertCell(3).appendChild(anchor);
                     row.insertCell(4).innerHTML = data.hallAddress;
 
+
+                    const statusSpan = document.createElement('SPAN');
+                    statusSpan.setAttribute('id','status');
+                    const statusVal = document.createTextNode(data.status);
+                    statusSpan.className = 'label label-sm';
+                    if (data.status === "Approved") {
+                        statusSpan.classList.add('label-success');
+                        console.log('a')
+                    }else {
+                        statusSpan.classList.add('label-warning');
+                        console.log('s', data.status === "Approved")
+                    }
+
+                    statusSpan.appendChild(statusVal);
+
+                    row.insertCell(5).appendChild(statusSpan);
+
+
                     const approve = document.createElement('BUTTON');
                     const approveText = document.createTextNode('approve');
                     approve.setAttribute("id",`approve${doc.id}`);
                     approve.appendChild(approveText);
 
-                    let hallId = null;
-                    let hallAdded = false;
-                    let roomAdded = false;
-                    let userUpdated = false;
+
                     approve.addEventListener('click',()=> {
                         let id = approve.getAttribute("id").slice(7);
                         //remove from requests + add to hall & room table
-                        // firebase.firestore().collection('halls').add({
-                        //     name: data.hallName,
-                        //     address : data.hallAddress,
-                        //     owner : data.userId,
-                        //     roomNum : 1
-                        // }).then((ref)=>{
-                        //     hallId = ref.id;
-                        //     hallAdded = true;
-                        //     console.log('hall added successfully',hallId);
-                        //
-                        // });
-                        //
-                        // setTimeout(()=>{
-                        //     firebase.firestore().collection('rooms').add({
-                        //         name: data.roomName,
-                        //         numberOfPeople : data.roomPersons,
-                        //         hallId: hallId,
-                        //         price : data.roomPrice,
-                        //         services: data.serviceName ,
-                        //         servicePrice : data.servicePrice,
-                        //         address: data.hallAddress,
-                        //         description: data.hallDescription,
-                        //         roomNum : 1
-                        //     }).then(()=>{
-                        //         roomAdded = true;
-                        //         console.log('room added successfully')
-                        //     });
-                        // },4000);
+                        firebase.firestore().collection('halls').add({
+                            name: data.hallName,
+                            address : data.hallAddress,
+                            owner : data.userId,
+                            roomNum : 1
+                        }).then((ref)=>{
+                            hallId = ref.id;
+                            hallAdded = true;
+                            console.log('hall added successfully',hallId);
 
-                        //
-                        // firebase.firestore().collection('users').doc(data.userId).update({
-                        //     manager: true,
-                        //     businessEmail : data.ownerEmail,
-                        //     businessPhone: data.ownerPhone
-                        // }).then(()=>{
-                        //     userUpdated = true;
-                        //     console.log('user updated')
-                        // });
+                        });
+
+                        setTimeout(()=>{
+                            firebase.firestore().collection('rooms').add({
+                                name: data.roomName,
+                                numberOfPeople : data.roomPersons,
+                                hallId: hallId,
+                                price : data.roomPrice,
+                                services: data.serviceName ,
+                                servicePrice : data.servicePrice,
+                                address: data.hallAddress,
+                                description: data.hallDescription,
+                                roomNum : 1
+                            }).then(()=>{
+                                roomAdded = true;
+                                console.log('room added successfully')
+                            });
+                        },4000);
+
+
+                        firebase.firestore().collection('users').doc(data.userId).update({
+                            manager: true,
+                            businessEmail : data.ownerEmail,
+                            businessPhone: data.ownerPhone
+                        }).then(()=>{
+                            userUpdated = true;
+                            console.log('user updated')
+                        });
 
 
 
@@ -114,6 +130,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         //     }
                         // },8000);
 
+                        const status = document.getElementById('status');
+
+                        firebase.firestore().collection('requests').doc(id).update({
+                            status:"Approved"
+                        }).then(()=> {
+                            status.innerText = " Approved ";
+                        }).catch(e=>console.log(e));
+
                         // Create a reference to the cities collection
                         let userInfo = firebase.firestore().collection("users");
                         let query = userInfo.where("uid", "==", data.userId)
@@ -131,7 +155,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                                 console.log("Error getting documents: ", error);
                             });
 
+                        const btn = document.getElementById(`approve${doc.id}`);
 
+                        btn.disabled=true;
 
                     });
 
@@ -148,7 +174,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         try{
                             firebase.firestore().collection('requests').doc(id).delete().then(function() {
                                 if (doc.exists) {
-                                 console.log("Document successfully deleted!");
+                                    console.log("Document successfully deleted!");
+                                    location.reload();
                                 }else {
                                     console.log('doc not exist')
                                 }
@@ -160,7 +187,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         }
                     });
 
-                    row.insertCell(5).append(approve,'  ' , reject);
+
+                    row.insertCell(6).append(approve,'  ' , reject);
                     // row.insertCell(5).appendChild(reject);
 
                     c++;
