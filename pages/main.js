@@ -77,6 +77,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             name: data.hallName,
                             address : data.hallAddress,
                             owner : data.userId,
+                            hallImage: data.hallImgURL,
+                            description: data.hallDescription,
                             roomNum : 1
                         }).then((ref)=>{
                             hallId = ref.id;
@@ -94,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                                 services: data.serviceName ,
                                 servicePrice : data.servicePrice,
                                 address: data.hallAddress,
-                                description: data.hallDescription,
+                                roomImage: data.roomImgURL,
                                 roomNum : 1
                             }).then(()=>{
                                 roomAdded = true;
