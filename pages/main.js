@@ -89,15 +89,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                         setTimeout(()=>{
                             firebase.firestore().collection('rooms').add({
-                                name: data.roomName,
-                                numberOfPeople : data.roomPersons,
+                                roomName: data.roomName,
+                                roomPersons : data.roomPersons,
                                 hallId: hallId,
-                                price : data.roomPrice,
-                                services: data.serviceName ,
+                                roomPrice : data.roomPrice,
+                                serviceName: data.serviceName ,
                                 servicePrice : data.servicePrice,
                                 address: data.hallAddress,
                                 roomImage: data.roomImgURL,
-                                roomNum : 1
+                                freeService:data.freeService,
+                                paidService:data.paidService,
                             }).then(()=>{
                                 roomAdded = true;
                                 console.log('room added successfully')
