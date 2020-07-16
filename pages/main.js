@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             to: expoPushToken,
             sound: 'default',
             title: 'Farha App',
-            body: 'تم قبول طلبك',
+            body: 'تم قبول طلبك للإنضمام لأصحاب الصالات, يمكنك عرض الصالات الخاصة بك وإضافة صالات جديدة',
 
         };
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 let c = 1;
                 querySnapshot.forEach((doc,index) => {
                     const data = doc.data();
-
+                    console.log(data);
                     let row = reqTable.insertRow(-1);
                     // for(let i = 0; i<=5 ;i++){
                     row.insertCell(0).innerHTML = c;
@@ -75,11 +75,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         //remove from requests + add to hall & room table
                         firebase.firestore().collection('halls').add({
                             name: data.hallName,
-                            address : data.hallAddress,
+                            address : data.category,
+                            location:data.hallAddress,
                             owner : data.userId,
                             hallImage: data.hallImgURL,
                             description: data.hallDescription,
-                            roomNum : 1
+                            roomNum : 1,
+                            isFav:false
                         }).then((ref)=>{
                             hallId = ref.id;
                             hallAdded = true;
