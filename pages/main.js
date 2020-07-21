@@ -83,7 +83,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             owner : data.userId,
                             hallImage: data.hallImgURL,
                             description: data.hallDescription,
-                            roomNum : 1,
+                            roomNum : data.numOfRoom,
+                            earnest: data.earnest,
+
                             isFav:false
                         }).then((ref)=>{
                             hallId = ref.id;
@@ -115,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         firebase.firestore().collection('users').doc(data.userId).update({
                             manager: true,
                             businessEmail : data.ownerEmail,
-                            businessPhone: data.ownerPhone
+                            businessPhone: data.ownerPhone,
+                            photoURL: data.managerImgURL
                         }).then(()=>{
                             userUpdated = true;
                             console.log('user updated')
