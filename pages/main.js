@@ -62,16 +62,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     statusSpan.appendChild(statusVal);
 
                     row.insertCell(5).appendChild(statusSpan);
-
-
-                    const approve = document.createElement('BUTTON');
-                    const approveText = document.createTextNode('approve');
+                    console.log(data.status, data.status === "Suspended");
+                    if (data.status === "Suspended") {
+                    var approve = document.createElement('BUTTON');
+                    approve.style.backgroundColor = "rgb(0, 216, 0)";
+                    approve.style.color = "#FFF";
+                    approve.style.borderColor = "rgb(0, 216, 0)";
+                    approve.style.fontSize = "14px";
+                    var approveText = document.createTextNode('approve');
                     approve.setAttribute("id",`approve${doc.id}`);
                     approve.appendChild(approveText);
 
-
                     approve.addEventListener('click',()=> {
-                        let id = approve.getAttribute("id").slice(7);
+                        var id = approve.getAttribute("id").slice(7);
                         //remove from requests + add to hall & room table
                         firebase.firestore().collection('halls').add({
                             name: data.hallName,
@@ -88,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             console.log('hall added successfully',hallId);
 
                         });
+
 
                         setTimeout(()=>{
                             firebase.firestore().collection('rooms').add({
@@ -119,23 +123,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-                        // setTimeout(()=> {
-                        //     try{
-                        //         firebase.firestore().collection('requests').doc(id).delete().then(function() {
-                        //             if (doc.exists) {
-                        //                 console.log("Document successfully deleted!");
-                        //             }else {
-                        //                 console.log('doc not exist')
-                        //             }
-                        //         }).catch(function(error) {
-                        //             console.error("Error removing document: ", error);
-                        //         });
-                        //     } catch (e) {
-                        //         console.log(e)
-                        //     }
-                        // },8000);
+                        setTimeout(()=> {
+                            firebase.firestore().collection('hallImages').add({
+                                hallId: hallId,
+                                hallImage: data.hallImgURL,
+                                roomImage: data.roomImgURL,
+                                caption:data.hallName
+                            }).then(()=>{
+                                console.log('Images added successfully');
 
-                        const status = document.getElementById('status');
+                            });
+                        },6000);
+
+
+
+                        var status = document.getElementById('status');
 
                         firebase.firestore().collection('requests').doc(id).update({
                             status:"Approved"
@@ -160,16 +162,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
                                 console.log("Error getting documents: ", error);
                             });
 
-                        const btn = document.getElementById(`approve${doc.id}`);
+                        var btn = document.getElementById(`approve${doc.id}`);
 
                         btn.disabled=true;
 
                     });
 
+                    }
+
+
 
 
 
                     const reject = document.createElement('BUTTON');
+                    reject.style.backgroundColor = "#f00";
+                    reject.style.color = "#FFF";
+                    reject.style.borderColor = "#F00";
+                    reject.style.fontSize = "14px";
                     const rejectText = document.createTextNode('reject');
                     reject.setAttribute("id",`reject${doc.id}`);
                     reject.appendChild(rejectText);
@@ -193,7 +202,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     });
 
 
-                    row.insertCell(6).append(approve,'  ' , reject);
+                   if (data.status === "Suspended") {
+                       row.insertCell(6).append(approve,'  ' , reject);
+                   }else {
+                       row.insertCell(6).append( reject);
+                   }
                     // row.insertCell(5).appendChild(reject);
 
                     c++;
