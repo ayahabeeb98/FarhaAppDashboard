@@ -2,3 +2,19 @@
     background-color: rgba(0,0,0,.05);
     cursor: pointer;
 }
+
+.mt-element-ribbon .ribbon-content.roomTable {
+    margin-top: .5rem;
+    width: 100%;
+}
+
+.roomTable th {
+    background-color: #36c6d3;
+    text-align: center;
+    color: white;
+}
+.roomTable td,
+.roomTable th {
+    border: 1px solid #969696;
+    padding: .5rem;
+}

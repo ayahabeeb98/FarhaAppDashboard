@@ -39,7 +39,10 @@
           type="text/css"/>
     <link href="../assets/layouts/layout/css/custom-rtl.min.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME LAYOUT STYLES -->
-    <link href="favicon.ico" rel="shortcut icon"/>
+    <link href="./img/icon.png" rel="shortcut icon"/>
+
+    <link href="./style.css" rel="stylesheet">
+
 </head>
 <!-- END HEAD -->
 
@@ -52,7 +55,8 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="index.html">
-                    <img alt="logo" class="logo-default" src="../assets/layouts/layout/img/logo.png"/> </a>
+                    <img src="./img/icon.png" alt="logo" class="logo-default" style="height: 34px;margin: 8px 0;" />
+                </a>
                 <div class="menu-toggler sidebar-toggler">
                     <span></span>
                 </div>
@@ -72,10 +76,9 @@
                     <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
                     <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
                     <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
-                        <a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
-                           href="javascript:;">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <i class="icon-bell"></i>
-                            <span class="badge badge-default"> 7 </span>
+                            <span class="badge badge-default"> 2 </span>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="external">
@@ -84,8 +87,7 @@
                                 <a href="page_user_profile_1.html">view all</a>
                             </li>
                             <li>
-                                <ul class="dropdown-menu-list scroller" data-handle-color="#637283"
-                                    style="height: 250px;">
+                                <ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
                                     <li>
                                         <a href="javascript:;">
                                             <span class="time">just now</span>
@@ -174,98 +176,13 @@
                     <!-- END NOTIFICATION DROPDOWN -->
                     <!-- BEGIN INBOX DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
-                        <a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
-                           href="javascript:;">
-                            <i class="icon-envelope-open"></i>
-                            <span class="badge badge-default"> 4 </span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="external">
-                                <h3>You have
-                                    <span class="bold">7 New</span> Messages</h3>
-                                <a href="app_inbox.html">view all</a>
-                            </li>
-                            <li>
-                                <ul class="dropdown-menu-list scroller" data-handle-color="#637283"
-                                    style="height: 275px;">
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img alt=""
-                                                             class="img-circle"
-                                                             src="../assets/layouts/layout3/img/avatar2.jpg"> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Lisa Wong </span>
-                                                        <span class="time">Just Now </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img alt=""
-                                                             class="img-circle"
-                                                             src="../assets/layouts/layout3/img/avatar3.jpg"> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Richard Doe </span>
-                                                        <span class="time">16 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img alt=""
-                                                             class="img-circle"
-                                                             src="../assets/layouts/layout3/img/avatar1.jpg"> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Bob Nilson </span>
-                                                        <span class="time">2 hrs </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img alt=""
-                                                             class="img-circle"
-                                                             src="../assets/layouts/layout3/img/avatar2.jpg"> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Lisa Wong </span>
-                                                        <span class="time">40 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                                    <span class="photo">
-                                                        <img alt=""
-                                                             class="img-circle"
-                                                             src="../assets/layouts/layout3/img/avatar3.jpg"> </span>
-                                            <span class="subject">
-                                                        <span class="from"> Richard Doe </span>
-                                                        <span class="time">46 mins </span>
-                                                    </span>
-                                            <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                     <!-- END INBOX DROPDOWN -->
                     <!-- BEGIN TODO DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
-                        <a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
-                           href="javascript:;">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <i class="icon-calendar"></i>
-                            <span class="badge badge-default"> 3 </span>
+                            <span class="badge badge-default"> 1 </span>
                         </a>
                         <ul class="dropdown-menu extended tasks">
                             <li class="external">
@@ -274,8 +191,7 @@
                                 <a href="app_todo.html">view all</a>
                             </li>
                             <li>
-                                <ul class="dropdown-menu-list scroller" data-handle-color="#637283"
-                                    style="height: 275px;">
+                                <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
                                     <li>
                                         <a href="javascript:;">
                                                     <span class="task">
@@ -283,11 +199,7 @@
                                                         <span class="percent">30%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="40"
-                                                              class="progress-bar progress-bar-success"
-                                                              style="width: 40%;">
+                                                        <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">40% Complete</span>
                                                         </span>
                                                     </span>
@@ -300,11 +212,7 @@
                                                         <span class="percent">65%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="65"
-                                                              class="progress-bar progress-bar-danger"
-                                                              style="width: 65%;">
+                                                        <span style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">65% Complete</span>
                                                         </span>
                                                     </span>
@@ -317,11 +225,7 @@
                                                         <span class="percent">98%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="98"
-                                                              class="progress-bar progress-bar-success"
-                                                              style="width: 98%;">
+                                                        <span style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">98% Complete</span>
                                                         </span>
                                                     </span>
@@ -334,11 +238,7 @@
                                                         <span class="percent">10%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="10"
-                                                              class="progress-bar progress-bar-warning"
-                                                              style="width: 10%;">
+                                                        <span style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">10% Complete</span>
                                                         </span>
                                                     </span>
@@ -351,9 +251,7 @@
                                                         <span class="percent">58%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100" aria-valuemin="0"
-                                                              aria-valuenow="58" class="progress-bar progress-bar-info"
-                                                              style="width: 58%;">
+                                                        <span style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">58% Complete</span>
                                                         </span>
                                                     </span>
@@ -366,11 +264,7 @@
                                                         <span class="percent">85%</span>
                                                     </span>
                                             <span class="progress">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="85"
-                                                              class="progress-bar progress-bar-success"
-                                                              style="width: 85%;">
+                                                        <span style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">85% Complete</span>
                                                         </span>
                                                     </span>
@@ -383,11 +277,7 @@
                                                         <span class="percent">38%</span>
                                                     </span>
                                             <span class="progress progress-striped">
-                                                        <span aria-valuemax="100"
-                                                              aria-valuemin="0"
-                                                              aria-valuenow="18"
-                                                              class="progress-bar progress-bar-important"
-                                                              style="width: 38%;">
+                                                        <span style="width: 38%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
                                                             <span class="sr-only">38% Complete</span>
                                                         </span>
                                                     </span>
@@ -401,10 +291,9 @@
                     <!-- BEGIN USER LOGIN DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                     <li class="dropdown dropdown-user">
-                        <a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
-                           href="javascript:;">
-                            <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg"/>
-                            <span class="username username-hide-on-mobile"> Nick </span>
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg" />
+                            <span class="username username-hide-on-mobile"> Admin </span>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
@@ -412,23 +301,15 @@
                                 <a href="page_user_profile_1.html">
                                     <i class="icon-user"></i> My Profile </a>
                             </li>
-                            <li>
-                                <a href="app_calendar.html">
-                                    <i class="icon-calendar"></i> My Calendar </a>
-                            </li>
-                            <li>
-                                <a href="app_inbox.html">
-                                    <i class="icon-envelope-open"></i> My Inbox
-                                    <span class="badge badge-danger"> 3 </span>
-                                </a>
-                            </li>
+
+
                             <li>
                                 <a href="app_todo.html">
                                     <i class="icon-rocket"></i> My Tasks
                                     <span class="badge badge-success"> 7 </span>
                                 </a>
                             </li>
-                            <li class="divider"></li>
+                            <li class="divider"> </li>
                             <li>
                                 <a href="page_user_lock_1.html">
                                     <i class="icon-lock"></i> Lock Screen </a>
@@ -442,11 +323,7 @@
                     <!-- END USER LOGIN DROPDOWN -->
                     <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                     <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-quick-sidebar-toggler">
-                        <a class="dropdown-toggle" href="javascript:;">
-                            <i class="icon-logout"></i>
-                        </a>
-                    </li>
+
                     <!-- END QUICK SIDEBAR TOGGLER -->
                 </ul>
             </div>
@@ -473,8 +350,7 @@
                 <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
                 <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
                 <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-closed " data-auto-scroll="true"
-                    data-keep-expanded="false" data-slide-speed="200" style="padding-top: 20px">
+                <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
                     <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                     <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
                     <li class="sidebar-toggler-wrapper hide">
@@ -488,14 +364,14 @@
                         <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
                         <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
                         <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-                        <form action="page_general_search_3.html" class="sidebar-search  " method="POST">
-                            <a class="remove" href="javascript:;">
+                        <form class="sidebar-search  " action="page_general_search_3.html" method="POST">
+                            <a href="javascript:;" class="remove">
                                 <i class="icon-close"></i>
                             </a>
                             <div class="input-group">
-                                <input class="form-control" placeholder="Search..." type="text">
+                                <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
-                                            <a class="btn submit" href="javascript:;">
+                                            <a href="javascript:;" class="btn submit">
                                                 <i class="icon-magnifier"></i>
                                             </a>
                                         </span>
@@ -504,27 +380,27 @@
                         <!-- END RESPONSIVE QUICK SEARCH FORM -->
                     </li>
                     <li class="nav-item start ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
+                        <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-home"></i>
                             <span class="title">Dashboard</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item start ">
-                                <a class="nav-link " href="index.html">
+                                <a href="index.html" class="nav-link ">
                                     <i class="icon-bar-chart"></i>
                                     <span class="title">Dashboard 1</span>
                                 </a>
                             </li>
                             <li class="nav-item start ">
-                                <a class="nav-link " href="dashboard_2.html">
+                                <a href="dashboard_2.html" class="nav-link ">
                                     <i class="icon-bulb"></i>
                                     <span class="title">Dashboard 2</span>
                                     <span class="badge badge-success">1</span>
                                 </a>
                             </li>
                             <li class="nav-item start ">
-                                <a class="nav-link " href="dashboard_3.html">
+                                <a href="dashboard_3.html" class="nav-link ">
                                     <i class="icon-graph"></i>
                                     <span class="title">Dashboard 3</span>
                                     <span class="badge badge-danger">5</span>
@@ -532,900 +408,96 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Features</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-diamond"></i>
-                            <span class="title">UI Features</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_colors.html">
-                                    <span class="title">Color Library</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_metronic_grid.html">
-                                    <span class="title">Metronic Grid System</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_general.html">
-                                    <span class="title">General Components</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_buttons.html">
-                                    <span class="title">Buttons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_buttons_spinner.html">
-                                    <span class="title">Spinner Buttons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_confirmations.html">
-                                    <span class="title">Popover Confirmations</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_sweetalert.html">
-                                    <span class="title">Bootstrap Sweet Alerts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_icons.html">
-                                    <span class="title">Font Icons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_socicons.html">
-                                    <span class="title">Social Icons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_typography.html">
-                                    <span class="title">Typography</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_tabs_accordions_navs.html">
-                                    <span class="title">Tabs, Accordions & Navs</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_timeline.html">
-                                    <span class="title">Timeline 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_timeline_2.html">
-                                    <span class="title">Timeline 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_timeline_horizontal.html">
-                                    <span class="title">Horizontal Timeline</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_tree.html">
-                                    <span class="title">Tree View</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
-                                    <span class="title">Page Progress Bar</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="ui_page_progress_style_1.html"> Flash </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="ui_page_progress_style_2.html"> Big Counter </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_blockui.html">
-                                    <span class="title">Block UI</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_bootstrap_growl.html">
-                                    <span class="title">Bootstrap Growl Notifications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_notific8.html">
-                                    <span class="title">Notific8 Notifications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_toastr.html">
-                                    <span class="title">Toastr Notifications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_bootbox.html">
-                                    <span class="title">Bootbox Dialogs</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_alerts_api.html">
-                                    <span class="title">Metronic Alerts API</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_session_timeout.html">
-                                    <span class="title">Session Timeout</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_idle_timeout.html">
-                                    <span class="title">User Idle Timeout</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_modals.html">
-                                    <span class="title">Modals</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_extended_modals.html">
-                                    <span class="title">Extended Modals</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_tiles.html">
-                                    <span class="title">Tiles</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_datepaginator.html">
-                                    <span class="title">Date Paginator</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ui_nestable.html">
-                                    <span class="title">Nestable List</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-puzzle"></i>
-                            <span class="title">Components</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_date_time_pickers.html">
-                                    <span class="title">Date & Time Pickers</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_color_pickers.html">
-                                    <span class="title">Color Pickers</span>
-                                    <span class="badge badge-danger">2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_select2.html">
-                                    <span class="title">Select2 Dropdowns</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_multiselect_dropdown.html">
-                                    <span class="title">Bootstrap Multiselect Dropdowns</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_select.html">
-                                    <span class="title">Bootstrap Select</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_multi_select.html">
-                                    <span class="title">Bootstrap Multiple Select</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_select_splitter.html">
-                                    <span class="title">Select Splitter</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_clipboard.html">
-                                    <span class="title">Clipboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_typeahead.html">
-                                    <span class="title">Typeahead Autocomplete</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_tagsinput.html">
-                                    <span class="title">Bootstrap Tagsinput</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_switch.html">
-                                    <span class="title">Bootstrap Switch</span>
-                                    <span class="badge badge-success">6</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_maxlength.html">
-                                    <span class="title">Bootstrap Maxlength</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_fileinput.html">
-                                    <span class="title">Bootstrap File Input</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_bootstrap_touchspin.html">
-                                    <span class="title">Bootstrap Touchspin</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_form_tools.html">
-                                    <span class="title">Form Widgets & Tools</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_context_menu.html">
-                                    <span class="title">Context Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_editors.html">
-                                    <span class="title">Markdown & WYSIWYG Editors</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_code_editors.html">
-                                    <span class="title">Code Editors</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_ion_sliders.html">
-                                    <span class="title">Ion Range Sliders</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_noui_sliders.html">
-                                    <span class="title">NoUI Range Sliders</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="components_knob_dials.html">
-                                    <span class="title">Knob Circle Dials</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-settings"></i>
-                            <span class="title">Form Stuff</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_controls.html">
-                                            <span class="title">Bootstrap Form
-                                                <br>Controls</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_controls_md.html">
-                                            <span class="title">Material Design
-                                                <br>Form Controls</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_validation.html">
-                                    <span class="title">Form Validation</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_validation_states_md.html">
-                                            <span class="title">Material Design
-                                                <br>Form Validation States</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_validation_md.html">
-                                            <span class="title">Material Design
-                                                <br>Form Validation</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_layouts.html">
-                                    <span class="title">Form Layouts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_repeater.html">
-                                    <span class="title">Form Repeater</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_input_mask.html">
-                                    <span class="title">Form Input Mask</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_editable.html">
-                                    <span class="title">Form X-editable</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_wizard.html">
-                                    <span class="title">Form Wizard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_icheck.html">
-                                    <span class="title">iCheck Controls</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_image_crop.html">
-                                    <span class="title">Image Cropping</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_fileupload.html">
-                                    <span class="title">Multiple File Upload</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="form_dropzone.html">
-                                    <span class="title">Dropzone File Upload</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-bulb"></i>
-                            <span class="title">Elements</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="elements_steps.html">
-                                    <span class="title">Steps</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="elements_lists.html">
-                                    <span class="title">Lists</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="elements_ribbons.html">
-                                    <span class="title">Ribbons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="elements_overlay.html">
-                                    <span class="title">Overlays</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="elements_cards.html">
-                                    <span class="title">User Cards</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
+
+                    <li class="nav-item  active open">
+                        <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-briefcase"></i>
                             <span class="title">Tables</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="table_static_basic.html">
-                                    <span class="title">Basic Tables</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="table_static_responsive.html">
-                                    <span class="title">Responsive Tables</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="table_bootstrap.html">
-                                    <span class="title">Bootstrap Tables</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
-                                    <span class="title">Datatables</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_managed.html"> Managed
-                                            Datatables </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_buttons.html"> Buttons
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_colreorder.html"> Colreorder
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_rowreorder.html"> Rowreorder
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_scroller.html"> Scroller
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_fixedheader.html"> FixedHeader
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_responsive.html"> Responsive
-                                            Extension </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_editable.html"> Editable
-                                            Datatables </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="table_datatables_ajax.html"> Ajax Datatables </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="?p=">
-                            <i class="icon-wallet"></i>
-                            <span class="title">Portlets</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="portlet_boxed.html">
-                                    <span class="title">Boxed Portlets</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="portlet_light.html">
-                                    <span class="title">Light Portlets</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="portlet_solid.html">
-                                    <span class="title">Solid Portlets</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="portlet_ajax.html">
-                                    <span class="title">Ajax Portlets</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="portlet_draggable.html">
-                                    <span class="title">Draggable Portlets</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-bar-chart"></i>
-                            <span class="title">Charts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_amcharts.html">
-                                    <span class="title">amChart</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_flotcharts.html">
-                                    <span class="title">Flot Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_flowchart.html">
-                                    <span class="title">Flow Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_google.html">
-                                    <span class="title">Google Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_echarts.html">
-                                    <span class="title">eCharts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="charts_morris.html">
-                                    <span class="title">Morris Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
-                                    <span class="title">HighCharts</span>
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="charts_highcharts.html"> HighCharts </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="charts_highstock.html"> HighStock </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link " href="charts_highmaps.html"> HighMaps </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-pointer"></i>
-                            <span class="title">Maps</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="maps_google.html">
-                                    <span class="title">Google Maps</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="maps_vector.html">
-                                    <span class="title">Vector Maps</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Layouts</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-layers"></i>
-                            <span class="title">Page Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_blank_page.html">
-                                    <span class="title">Blank Page</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_ajax_page.html">
-                                    <span class="title">Ajax Content Layout</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_offcanvas_mobile_menu.html">
-                                    <span class="title">Off-canvas Mobile Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_classic_page_head.html">
-                                    <span class="title">Classic Page Head</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_light_page_head.html">
-                                    <span class="title">Light Page Head</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_content_grey.html">
-                                    <span class="title">Grey Bg Content</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_search_on_header_1.html">
-                                    <span class="title">Search Box On Header 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_search_on_header_2.html">
-                                    <span class="title">Search Box On Header 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_language_bar.html">
-                                    <span class="title">Header Language Bar</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_footer_fixed.html">
-                                    <span class="title">Fixed Footer</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_boxed_page.html">
-                                    <span class="title">Boxed Page</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-feed"></i>
-                            <span class="title">Sidebar Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_menu_light.html">
-                                    <span class="title">Light Sidebar Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_menu_hover.html">
-                                    <span class="title">Hover Sidebar Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_search_1.html">
-                                    <span class="title">Sidebar Search Option 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_search_2.html">
-                                    <span class="title">Sidebar Search Option 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_toggler_on_sidebar.html">
-                                    <span class="title">Sidebar Toggler On Sidebar</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_reversed.html">
-                                    <span class="title">Reversed Sidebar Page</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_fixed.html">
-                                    <span class="title">Fixed Sidebar Layout</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_sidebar_closed.html">
-                                    <span class="title">Closed Sidebar Layout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-paper-plane"></i>
-                            <span class="title">Horizontal Menu</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_mega_menu_light.html">
-                                    <span class="title">Light Mega Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_mega_menu_dark.html">
-                                    <span class="title">Dark Mega Menu</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_full_width.html">
-                                    <span class="title">Full Width Layout</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class=" icon-wrench"></i>
-                            <span class="title">Custom Layouts</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_disabled_menu.html">
-                                    <span class="title">Disabled Menu Links</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_full_height_portlet.html">
-                                    <span class="title">Full Height Portlet</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="layout_full_height_content.html">
-                                    <span class="title">Full Height Content</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="heading">
-                        <h3 class="uppercase">Pages</h3>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-basket"></i>
-                            <span class="title">eCommerce</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ecommerce_index.html">
-                                    <i class="icon-home"></i>
-                                    <span class="title">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ecommerce_orders.html">
-                                    <i class="icon-basket"></i>
-                                    <span class="title">Orders</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ecommerce_orders_view.html">
-                                    <i class="icon-tag"></i>
-                                    <span class="title">Order View</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ecommerce_products.html">
-                                    <i class="icon-graph"></i>
-                                    <span class="title">Products</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="ecommerce_products_edit.html">
-                                    <i class="icon-graph"></i>
-                                    <span class="title">Product Edit</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-docs"></i>
-                            <span class="title">Apps</span>
-                            <span class="arrow"></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="app_todo.html">
-                                    <i class="icon-clock"></i>
-                                    <span class="title">Todo 1</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="app_todo_2.html">
-                                    <i class="icon-check"></i>
-                                    <span class="title">Todo 2</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="app_inbox.html">
-                                    <i class="icon-envelope"></i>
-                                    <span class="title">Inbox</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="app_calendar.html">
-                                    <i class="icon-calendar"></i>
-                                    <span class="title">Calendar</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a class="nav-link " href="app_ticket.html">
-                                    <i class="icon-notebook"></i>
-                                    <span class="title">Support</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item  active open">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-user"></i>
-                            <span class="title">User</span>
                             <span class="selected"></span>
                             <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">
+
+                            <li class="nav-item  active">
+                                <a href="dashboard.html" class="nav-link ">
+                                    <span class="title">Requests Tables</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="heading">
+                        <h3 class="uppercase">Pages</h3>
+                    </li>
+
+                    <li class="nav-item  ">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-user"></i>
+                            <span class="title">User</span>
+                            <span class="arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_user_profile_1.html">
+                                <a href="page_user_profile_1.html" class="nav-link ">
                                     <i class="icon-user"></i>
                                     <span class="title">Profile 1</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_user_profile_1_account.html">
+                                <a href="page_user_profile_1_account.html" class="nav-link ">
                                     <i class="icon-user-female"></i>
                                     <span class="title">Profile 1 Account</span>
                                 </a>
                             </li>
-                            <li class="nav-item  active open">
-                                <a class="nav-link " href="hallDetails.html">
+                            <li class="nav-item  ">
+                                <a href="hallDetails.html" class="nav-link ">
                                     <i class="icon-user-following"></i>
                                     <span class="title">Profile 1 Help</span>
-                                    <span class="selected"></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_user_profile_2.html">
+                                <a href="page_user_profile_2.html" class="nav-link ">
                                     <i class="icon-users"></i>
                                     <span class="title">Profile 2</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
+                                <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="icon-notebook"></i>
                                     <span class="title">Login</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_1.html" target="_blank"> Login Page
-                                            1 </a>
+                                        <a href="page_user_login_1.html" class="nav-link " target="_blank"> Login Page 1 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_2.html" target="_blank"> Login Page
-                                            2 </a>
+                                        <a href="page_user_login_2.html" class="nav-link " target="_blank"> Login Page 2 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_3.html" target="_blank"> Login Page
-                                            3 </a>
+                                        <a href="page_user_login_3.html" class="nav-link " target="_blank"> Login Page 3 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_4.html" target="_blank"> Login Page
-                                            4 </a>
+                                        <a href="page_user_login_4.html" class="nav-link " target="_blank"> Login Page 4 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_5.html" target="_blank"> Login Page
-                                            5 </a>
+                                        <a href="page_user_login_5.html" class="nav-link " target="_blank"> Login Page 5 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_user_login_6.html" target="_blank"> Login Page
-                                            6 </a>
+                                        <a href="page_user_login_6.html" class="nav-link " target="_blank"> Login Page 6 </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_user_lock_1.html" target="_blank">
+                                <a href="page_user_lock_1.html" class="nav-link " target="_blank">
                                     <i class="icon-lock"></i>
                                     <span class="title">Lock Screen 1</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_user_lock_2.html" target="_blank">
+                                <a href="page_user_lock_2.html" class="nav-link " target="_blank">
                                     <i class="icon-lock-open"></i>
                                     <span class="title">Lock Screen 2</span>
                                 </a>
@@ -1433,101 +505,101 @@
                         </ul>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
+                        <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-social-dribbble"></i>
                             <span class="title">General</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_about.html">
+                                <a href="page_general_about.html" class="nav-link ">
                                     <i class="icon-info"></i>
                                     <span class="title">About</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_contact.html">
+                                <a href="page_general_contact.html" class="nav-link ">
                                     <i class="icon-call-end"></i>
                                     <span class="title">Contact</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
+                                <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="icon-notebook"></i>
                                     <span class="title">Portfolio</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_portfolio_1.html"> Portfolio 1 </a>
+                                        <a href="page_general_portfolio_1.html" class="nav-link "> Portfolio 1 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_portfolio_2.html"> Portfolio 2 </a>
+                                        <a href="page_general_portfolio_2.html" class="nav-link "> Portfolio 2 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_portfolio_3.html"> Portfolio 3 </a>
+                                        <a href="page_general_portfolio_3.html" class="nav-link "> Portfolio 3 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_portfolio_4.html"> Portfolio 4 </a>
+                                        <a href="page_general_portfolio_4.html" class="nav-link "> Portfolio 4 </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link nav-toggle" href="javascript:;">
+                                <a href="javascript:;" class="nav-link nav-toggle">
                                     <i class="icon-magnifier"></i>
                                     <span class="title">Search</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_search.html"> Search 1 </a>
+                                        <a href="page_general_search.html" class="nav-link "> Search 1 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_search_2.html"> Search 2 </a>
+                                        <a href="page_general_search_2.html" class="nav-link "> Search 2 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_search_3.html"> Search 3 </a>
+                                        <a href="page_general_search_3.html" class="nav-link "> Search 3 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_search_4.html"> Search 4 </a>
+                                        <a href="page_general_search_4.html" class="nav-link "> Search 4 </a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link " href="page_general_search_5.html"> Search 5 </a>
+                                        <a href="page_general_search_5.html" class="nav-link "> Search 5 </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_pricing.html">
+                                <a href="page_general_pricing.html" class="nav-link ">
                                     <i class="icon-tag"></i>
                                     <span class="title">Pricing</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_faq.html">
+                                <a href="page_general_faq.html" class="nav-link ">
                                     <i class="icon-wrench"></i>
                                     <span class="title">FAQ</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_blog.html">
+                                <a href="page_general_blog.html" class="nav-link ">
                                     <i class="icon-pencil"></i>
                                     <span class="title">Blog</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_blog_post.html">
+                                <a href="page_general_blog_post.html" class="nav-link ">
                                     <i class="icon-note"></i>
                                     <span class="title">Blog Post</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_invoice.html">
+                                <a href="page_general_invoice.html" class="nav-link ">
                                     <i class="icon-envelope"></i>
                                     <span class="title">Invoice</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_general_invoice_2.html">
+                                <a href="page_general_invoice_2.html" class="nav-link ">
                                     <i class="icon-envelope"></i>
                                     <span class="title">Invoice 2</span>
                                 </a>
@@ -1535,127 +607,55 @@
                         </ul>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link nav-toggle" href="javascript:;">
+                        <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-settings"></i>
-                            <span class="title">System</span>
+                            <span class="title">Setting</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_cookie_consent_1.html">
+                                <a href="page_cookie_consent_1.html" class="nav-link ">
                                     <span class="title">Cookie Consent 1</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_cookie_consent_2.html">
+                                <a href="page_cookie_consent_2.html" class="nav-link ">
                                     <span class="title">Cookie Consent 2</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_coming_soon.html" target="_blank">
+                                <a href="page_system_coming_soon.html" class="nav-link " target="_blank">
                                     <span class="title">Coming Soon</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_404_1.html">
+                                <a href="page_system_404_1.html" class="nav-link ">
                                     <span class="title">404 Page 1</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_404_2.html" target="_blank">
+                                <a href="page_system_404_2.html" class="nav-link " target="_blank">
                                     <span class="title">404 Page 2</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_404_3.html" target="_blank">
+                                <a href="page_system_404_3.html" class="nav-link " target="_blank">
                                     <span class="title">404 Page 3</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_500_1.html">
+                                <a href="page_system_500_1.html" class="nav-link ">
                                     <span class="title">500 Page 1</span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a class="nav-link " href="page_system_500_2.html" target="_blank">
+                                <a href="page_system_500_2.html" class="nav-link " target="_blank">
                                     <span class="title">500 Page 2</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-toggle" href="javascript:;">
-                            <i class="icon-folder"></i>
-                            <span class="title">Multi Level Menu</span>
-                            <span class="arrow "></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="nav-item">
-                                <a class="nav-link nav-toggle" href="javascript:;">
-                                    <i class="icon-settings"></i> Item 1
-                                    <span class="arrow"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="javascript:;" target="_blank">
-                                            <i class="icon-user"></i> Arrow Toggle
-                                            <span class="arrow nav-toggle"></span>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">
-                                                    <i class="icon-power"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">
-                                                    <i class="icon-paper-plane"></i> Sample Link 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">
-                                                    <i class="icon-star"></i> Sample Link 1</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-camera"></i> Sample Link 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-link"></i> Sample Link 2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-pointer"></i> Sample Link 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="javascript:;" target="_blank">
-                                    <i class="icon-globe"></i> Arrow Toggle
-                                    <span class="arrow nav-toggle"></span>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-tag"></i> Sample Link 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-pencil"></i> Sample Link 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">
-                                            <i class="icon-graph"></i> Sample Link 1</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="icon-bar-chart"></i> Item 3 </a>
-                            </li>
-                        </ul>
-                    </li>
+
                 </ul>
                 <!-- END SIDEBAR MENU -->
                 <!-- END SIDEBAR MENU -->
@@ -1686,38 +686,11 @@
                             <span>Request Details</span>
                         </li>
                     </ul>
-                    <div class="page-toolbar">
-                        <div class="btn-group pull-right">
-                            <button class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"
-                                    type="button"> Actions
-                                <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu pull-right" role="menu">
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-bell"></i> Action</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-shield"></i> Another action</a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-user"></i> Something else here</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-bag"></i> Separated link</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
                 <!-- END PAGE BAR -->
                 <!-- BEGIN PAGE TITLE-->
-                <h1 class="page-title">Request #ID
-                    <small>CreatedAt</small>
+                <h1 class="page-title">
                 </h1>
                 <!-- END PAGE TITLE-->
                 <!-- END PAGE HEADER-->
@@ -1834,7 +807,8 @@
                                                                         </div>
 
                                                                         <div class="col-xs-6">
-                                                                            <img alt="" class="img-responsive" id="hallImg"
+                                                                            <img alt="" class="img-responsive"
+                                                                                 id="hallImg"
                                                                                  src=""
                                                                                  style="width: 100%; height: 400px;object-fit: contain">
                                                                         </div>
@@ -1859,47 +833,45 @@
                                                                     <div class="row">
                                                                         <div class="col-xs-6">
                                                                             <div class="mt-element-ribbon bg-grey-steel">
-                                                                                <div class="ribbon ribbon-shadow ribbon-color-success uppercase">
-                                                                                    Room Name
+                                                                                <div id="roomName" class="ribbon ribbon-shadow ribbon-color-success uppercase" style="font-size: 1.7rem">
                                                                                 </div>
-                                                                                <p class="ribbon-content" id="roomName">
-                                                                                    name
-                                                                                </p>
+                                                                                <p id="capacity"
+                                                                                   class="ribbon-content" style="padding-bottom: 10px;"></p>
+                                                                                <p class="ribbon-content" style="padding-top: 0;padding-bottom: 10px;">سعر القاعة:
+                                                                                    <span id="price"></span></p>
+                                                                                <p class="ribbon-content" style="padding-top: 0;padding-bottom: 70px;">الخدمات التي
+                                                                                    توفرها : <span id="serv"></span></p>
                                                                             </div>
                                                                             <div class="mt-element-ribbon bg-grey-steel">
-                                                                                <div class="ribbon ribbon-shadow ribbon-color-success uppercase">
-                                                                                    Room Details
+                                                                                <div class="ribbon ribbon-shadow ribbon-color-success uppercase" style="font-size: 1.7rem">
+                                                                                    القاعة البرجوازية
                                                                                 </div>
-                                                                                <p class="ribbon-content" id="capacity">
-                                                                                    000
+                                                                                <p class="ribbon-content" style="padding-bottom: 10px;">
+                                                                                    تتسع إلى 500 شخص
                                                                                 </p>
-
-                                                                                <p class="ribbon-content" id="price">
-                                                                                    000
-                                                                                </p>
+                                                                                <p class="ribbon-content" style="padding-top: 0;padding-bottom: 10px;">
+                                                                                    سعر القاعة:
+                                                                                    <span>400$</span></p>
+                                                                                <p class="ribbon-content" style="padding-top: 0;padding-bottom: 70px;">الخدمات التي
+                                                                                    توفرها : <span> قاعة مكيفة بالكامل - شاشات عرض - كوشة مضيئة</span></p>
                                                                             </div>
-                                                                            <div class="mt-element-ribbon bg-grey-steel">
-                                                                                <div class="ribbon ribbon-right ribbon-vertical-right ribbon-shadow ribbon-border-dash-vert ribbon-color-primary uppercase">
-                                                                                    <div class="ribbon-sub ribbon-bookmark"></div>
-                                                                                    <i class="fa fa-star"></i>
-                                                                                </div>
-                                                                                <div class="ribbon ribbon-border-hor ribbon-clip ribbon-color-danger ribbon-border-dash-hor uppercase">
-                                                                                    <div class="ribbon-sub ribbon-clip"></div>
-                                                                                    Services
-                                                                                </div>
 
-                                                                                <p class="ribbon-content" id="serv">
-                                                                                    serv
-                                                                                </p>
-                                                                            </div>
                                                                         </div>
+
+
 
                                                                         <div class="col-xs-6">
-                                                                            <img alt="" class="img-responsive" id="roomImg"
+                                                                            <img alt="" class="img-responsive"
+                                                                                 id="roomImg"
                                                                                  src=""
-                                                                                 style="width: 100%; height: 400px;object-fit: contain">
+                                                                                 style="position:relative;width: 100%;top:-8rem; height: 400px;object-fit: contain">
+
+                                                                            <img alt="" class="img-responsive"
+                                                                                 style="position:relative;width: 100%;top:-8rem; height: 400px;object-fit: contain"
+                                                                            src="./img/hall.jpg"/>
                                                                         </div>
                                                                     </div>
+
                                                                 </div>
                                                             </div>
 
@@ -2531,11 +1503,8 @@
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
-            <div class="page-footer-inner"> 2016 &copy; Metronic Theme By
-                <a href="http://keenthemes.com" target="_blank">Keenthemes</a> &nbsp;|&nbsp;
-                <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"
-                   target="_blank" title="Purchase Metronic just for 27$ and get lifetime updates for free">Purchase
-                    Metronic!</a>
+            <div class="page-footer-inner"> 2020 &copy; Farha Application
+
             </div>
             <div class="scroll-to-top">
                 <i class="icon-arrow-up"></i>

@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
             hallName.innerHTML = data.hallName;
             hallLocation.innerHTML = data.category + ', ' + data.hallAddress;
             hallImg.src = data.hallImgURL;
-            details.innerHTML = 'Hall Details: ' +  data.hallDescription;
-            roomNum.innerHTML = 'There is ' + data.numOfRoom + ' Rooms';
+            details.innerHTML =  data.hallDescription;
+            roomNum.innerHTML = 'عدد القاعات :  ' + data.numOfRoom;
 
-            roomName.innerHTML = data.roomName + ' Room';
+            roomName.innerHTML = data.roomName ;
             roomImg.src = data.roomImgURL;
-            capacity.innerHTML = 'Number Of people ' + data.roomPersons;
-            roomPrice.innerHTML = data.roomPrice + '$';
+            capacity.innerHTML = 'تتسع إلى ' + data.roomPersons + ' شخص ';
+            roomPrice.innerHTML = data.roomPrice ;
 
-            service.innerHTML = data.serviceName + ' <br/>' + 'its price ' + data.servicePrice + '<br/>' + servType
+            service.innerHTML = data.serviceName
             // let row = hallTable.insertRow(1);
             // for(let i = 0; i<=5 ;i++){
             // row.insertCell(0).innerHTML = 1;

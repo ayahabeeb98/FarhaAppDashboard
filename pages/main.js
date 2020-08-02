@@ -50,14 +50,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     const statusSpan = document.createElement('SPAN');
                     statusSpan.setAttribute('id','status');
                     const statusVal = document.createTextNode(data.status);
-                    statusSpan.className = 'label label-sm';
-                    if (data.status === "Approved") {
-                        statusSpan.classList.add('label-success');
-                        console.log('a')
-                    }else {
-                        statusSpan.classList.add('label-warning');
-                        console.log('s', data.status === "Approved")
-                    }
+
+                    statusSpan.style.fontWeight = "bold";
 
                     statusSpan.appendChild(statusVal);
 
@@ -65,9 +59,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     console.log(data.status, data.status === "Suspended");
                     if (data.status === "Suspended") {
                     var approve = document.createElement('BUTTON');
-                    approve.style.backgroundColor = "rgb(0, 216, 0)";
+                    approve.style.backgroundColor = "rgb(37, 186, 37)";
                     approve.style.color = "#FFF";
-                    approve.style.borderColor = "rgb(0, 216, 0)";
+                    approve.style.borderColor = "rgb(37, 186 ,37)";
                     approve.style.fontSize = "14px";
                     var approveText = document.createTextNode('approve');
                     approve.setAttribute("id",`approve${doc.id}`);
@@ -85,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                             description: data.hallDescription,
                             roomNum : data.numOfRoom,
                             earnest: data.earnest,
+                            ordersCounter: "20-000",
 
                             isFav:false
                         }).then((ref)=>{
@@ -178,9 +173,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
                     const reject = document.createElement('BUTTON');
-                    reject.style.backgroundColor = "#f00";
+                    reject.style.backgroundColor = "rgb(255,60,41)";
                     reject.style.color = "#FFF";
-                    reject.style.borderColor = "#F00";
+                    reject.style.borderColor = "rgb(255,60,41)";
                     reject.style.fontSize = "14px";
                     const rejectText = document.createTextNode('reject');
                     reject.setAttribute("id",`reject${doc.id}`);
