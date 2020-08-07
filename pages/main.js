@@ -59,6 +59,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     console.log(data.status, data.status === "Suspended");
                     if (data.status === "Suspended") {
                     var approve = document.createElement('BUTTON');
+                    approve.classList.add('btn');
+                    approve.classList.add('btn-submit');
+                    approve.classList.add('mt-sweetalert');
+                    approve.setAttribute('data-title','Done');
+                    approve.setAttribute('data-allow','success');
+                    approve.setAttribute('data-allow-outside-click','true');
+                    approve.setAttribute('data-confirm-button-class','btn-success');
+                    approve.setAttribute('data-message','Wedding Hall added successfully');
                     approve.style.backgroundColor = "rgb(37, 186, 37)";
                     approve.style.color = "#FFF";
                     approve.style.borderColor = "rgb(37, 186 ,37)";
@@ -68,7 +76,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     approve.appendChild(approveText);
 
                     approve.addEventListener('click',()=> {
-                        var id = approve.getAttribute("id").slice(7);
+                        swal("Done", "Wedding Hall added Successfully", "success");
+
+                            var id = approve.getAttribute("id").slice(7);
                         //remove from requests + add to hall & room table
                         firebase.firestore().collection('halls').add({
                             name: data.hallName,
@@ -166,13 +176,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                     });
 
-                    }
+                    };
 
 
 
 
 
                     const reject = document.createElement('BUTTON');
+                    reject.classList.add('btn');
+                    reject.classList.add('btn-danger');
+
                     reject.style.backgroundColor = "rgb(255,60,41)";
                     reject.style.color = "#FFF";
                     reject.style.borderColor = "rgb(255,60,41)";
@@ -182,6 +195,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     reject.appendChild(rejectText);
 
                     reject.addEventListener('click',  () => {
+                        swal({
+                                title: "Are you sure?",
+                                type: "warning",
+                                showCancelButton: true,
+                                confirmButtonClass: "btn-danger",
+                                confirmButtonText: "Yes, delete it!",
+                                closeOnConfirm: false,
+                            },
+                            function(){
+                                swal("Deleted!", "The request has been deleted.", "success");
+
                         let id = reject.getAttribute("id").slice(6);
                         try{
                             firebase.firestore().collection('requests').doc(id).delete().then(function() {
@@ -197,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                         } catch (e) {
                             console.log(e)
                         }
+                            });
                     });
 
 
